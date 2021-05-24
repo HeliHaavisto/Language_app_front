@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Menu = () => {
   return (
     <div>
-      <h1>Alphabets or Drag'n'Drop</h1>
-
+      <Link to="/alphabet"><h1>Alphabet</h1></Link>
+      <Link to="/gamelanding"><h1>Drag'n'Drop</h1></Link>
       <Link to="/">Home</Link>
     </div>
   );
