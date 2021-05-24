@@ -1,4 +1,13 @@
-# Added Dependencies
+# Language app
+
+## Creators:
+
+- Aryal Sagar
+- Haavisto Heli
+- Ivankina Elena
+- Ubozhenko Iolanta
+
+## Added Dependencies
 
 testing out Heli-branch
 
