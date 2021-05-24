@@ -5,8 +5,8 @@ import { Link, Switch } from "react-router-dom";
 const Home = () => {
   return (
     <div>
-      <h1>Welcome to</h1>
-      <img src={Logo} alt="logo" />
+      <h1 className="style-font">Welcome to</h1>
+      <img src={Logo} alt="logo" className="logo" />
       <p>
         Language <br /> Learning <br /> App
       </p>
