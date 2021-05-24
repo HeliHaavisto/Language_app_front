@@ -1,0 +1,15 @@
+.abc-container {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: thistle;
+}
+
+.abc-letter {
+	background-color: yellow;
+	height: 5rem;
+	width: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 1rem;
+}
