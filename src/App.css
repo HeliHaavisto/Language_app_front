@@ -21,7 +21,6 @@ body {
 .abc-container {
 	display: flex;
 	flex-wrap: wrap;
-	/* background-color: thistle; */
 }
 
 .abc-letter {
