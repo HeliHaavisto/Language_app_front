@@ -1,3 +1,5 @@
+/* This styling is for testing my alphabet page. It can be changed or removed. Lena */
+
 .abc-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -13,3 +15,5 @@
 	justify-content: center;
 	margin: 1rem;
 }
+
+/* Until here. Lena  */
