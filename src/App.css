@@ -59,32 +59,19 @@ p {
   border-radius: 5px;
 }
 
-.drag-container {
-  text-align: center;
-  width: 100%;
-  margin-left: 2rem;
-}
-
-.wip {
-  position: absolute;
-  width: 200px;
-  height: 100vh;
-  left: 0;
-  top: 10;
-}
-
-.droppable {
+.drop {
   position: absolute;
   width: 200px;
   height: 100vh;
   right: 0;
   top: 10;
 }
-.draggable {
+.drag {
   display: inline-block;
   width: 100px;
   height: 100px;
   margin: 5px auto;
   line-height: 5em;
+  text-align: center;
   background-color: yellowgreen;
 }

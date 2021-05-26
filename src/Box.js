@@ -11,16 +11,13 @@ const Box = () => {
   }, []);
 
   return (
-    <div className="drag-container">
+    <div>
       {data.map((item) => {
         return (
           <div key={item.id}>
-            <div className="wip">
-              <p className="draggable">{item.name_fi}</p>
-            </div>
-            <div className="droppable">
-              <img className="draggable" src={item.img} alt={item.name_fi} />
-            </div>
+            <strong className="drag ">{item.name_fi}</strong>
+
+            <img className="drop drag " src={item.img} alt={item.name_fi} />
           </div>
         );
       })}
