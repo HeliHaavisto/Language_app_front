@@ -18,6 +18,23 @@ body {
   color: white;
 }
 
+p {
+  font-family: "Nunito", sans-serif;
+}
+
+.p-main-page {
+  text-align: center;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 15rem;
+}
+
 .logo {
   width: 8rem;
 }
@@ -25,17 +42,21 @@ body {
 .abc-container {
   display: flex;
   flex-wrap: wrap;
-  /* background-color: thistle; */
 }
 
 .abc-letter {
-  background-color: yellow;
+  background-color: #110a65;
   height: 5rem;
   width: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 1rem;
+  font-size: 2.5rem;
+  font-family: "Nunito", sans-serif;
+  color: white;
+  border-style: none;
+  border-radius: 5px;
 }
 
 .drag-container {

@@ -5,7 +5,7 @@ import Home from "./Home";
 
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "./About";
-import Alphabet from "./Alphabet";
+import Alphabet from "./Alphabet/Alphabet";
 import Dragndrop from "./Dragndrop";
 import Gamelanding from "./Gamelanding";
 import Menu from "./Menu";

@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>
+    <div className="container">
       <h1 className="style-font">Welcome to</h1>
       <img src={Logo} alt="logo" className="logo" />
-      <p>
+      <p className="p-main-page">
         Language <br /> Learning <br /> App
       </p>
 
