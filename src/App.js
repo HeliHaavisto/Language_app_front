@@ -11,6 +11,8 @@ import Gamelanding from "./Gamelanding";
 import Menu from "./Menu";
 import Modal from "./Modal";
 
+import DragNDrop from "./Lena_try_on_DragNDrop/DragNDropLena";
+
 function App() {
 	return (
 		<Router>
@@ -35,6 +37,9 @@ function App() {
 				</Route>
 				<Route path="/modal">
 					<Modal />
+				</Route>
+				<Route path="/lena">
+					<DragNDrop />
 				</Route>
 			</Switch>
 		</Router>
