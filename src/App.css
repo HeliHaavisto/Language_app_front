@@ -58,3 +58,20 @@ p {
   border-style: none;
   border-radius: 5px;
 }
+
+.drop {
+  position: absolute;
+  width: 200px;
+  height: 100vh;
+  right: 0;
+  top: 10;
+}
+.drag {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 5px auto;
+  line-height: 5em;
+  text-align: center;
+  background-color: yellowgreen;
+}
