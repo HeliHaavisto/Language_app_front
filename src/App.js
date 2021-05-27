@@ -10,6 +10,7 @@ import Dragndrop from "./Dragndrop";
 import Gamelanding from "./Gamelanding";
 import Menu from "./Menu";
 import Modal from "./Modal";
+import Iolantasdnd from "./Iolantasdnd";
 
 import DragNDrop from "./Lena_try_on_DragNDrop/DragNDropLena";
 
@@ -40,6 +41,9 @@ function App() {
 				</Route>
 				<Route path="/lena">
 					<DragNDrop />
+				</Route>
+				<Route path="/iolanta">
+					<Iolantasdnd />
 				</Route>
 			</Switch>
 		</Router>
