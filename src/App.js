@@ -13,6 +13,7 @@ import Modal from "./Modal";
 import Iolantasdnd from "./Iolantasdnd";
 
 import DragNDrop from "./Lena_try_on_DragNDrop/DragNDropLena";
+import NewDragAndDropLena from "./Lena_try_on_DragNDrop/NewDragAndDropLena";
 
 function App() {
 	return (
@@ -41,6 +42,9 @@ function App() {
 				</Route>
 				<Route path="/lena">
 					<DragNDrop />
+				</Route>
+				<Route path="/lenanew">
+					<NewDragAndDropLena />
 				</Route>
 				<Route path="/iolanta">
 					<Iolantasdnd />
