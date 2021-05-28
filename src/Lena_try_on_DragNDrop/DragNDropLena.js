@@ -3,9 +3,11 @@ import "./Drop.css";
 
 const data = [
 	{ title: "group 1", items: ["kissa"], pair: "cat-kissa" },
-	{ title: "group 2", items: ["cat"], pair: "cat-kissa" },
+	{ title: "group 2", items: ["cat"], pair: "cat-kissa", image: "./img/cat-solid.svg" },
 	{ title: "group 3", items: ["koira"], pair: "dog-koira" },
-	{ title: "group 4", items: ["dog"], pair: "dog-koira" },
+	{ title: "group 4", items: ["dog"], pair: "dog-koira", image: "./img/dog-solid.svg" },
+	{ title: "group 5", items: ["hevonen"], pair: "horse-hevonen" },
+	{ title: "group 6", items: ["horse"], pair: "horse-hevonen", image: "./img/horse-solid.svg" },
 ];
 
 const DragNDropLena = () => {
@@ -25,7 +27,16 @@ const DragNDropLena = () => {
 		setDragging(true);
 	};
 
+	const removeExtraDivs = () => {
+		document.querySelectorAll(".dnd-group").forEach((e) => {
+			if (e.innerHTML === "") {
+				e.remove();
+			}
+		});
+	};
+
 	const handleDragEnd = () => {
+		removeExtraDivs();
 		console.log("ended");
 		setDragging(false);
 		dragNode.current.removeEventListener("dragend", handleDragEnd);
@@ -41,9 +52,6 @@ const DragNDropLena = () => {
 			(dragNode.current.innerHTML + "-" + e.target.innerHTML === group ||
 				e.target.innerHTML + "-" + dragNode.current.innerHTML === group)
 		) {
-			// let pairX = list.map((grp) => {
-			// 	return grp.pair;
-			// });
 			console.log(
 				"Target not the same",
 				dragNode.current.innerHTML,
@@ -51,6 +59,7 @@ const DragNDropLena = () => {
 				"pair: ",
 				group
 			);
+
 			setList((oldList) => {
 				let newList = JSON.parse(JSON.stringify(oldList));
 				newList[params.grp1].items.splice(
@@ -65,11 +74,14 @@ const DragNDropLena = () => {
 	};
 
 	const getStyles = (params) => {
-		const currentItem = dragItem.current;
-		if (currentItem.grp1 === params.grp1 && currentItem.item1 === params.item1) {
-			return "current";
+		// const currentItem = dragItem.current;
+		// if (currentItem.grp1 === params.grp1 && currentItem.item1 === params.item1) {
+		// 	return "current";
+		// }
+		// return "dnd-item";
+		if (params.image !== undefined) {
+			// <img className="card-img" src={params.image} alt={params.item} />;
 		}
-		return "dnd-item";
 	};
 
 	return (
@@ -97,16 +109,20 @@ const DragNDropLena = () => {
 											handleDragStart(e, { grp1, item1 });
 										}}
 										onDragEnter={
-											dragging //&& grp.pair === "cat-kissa"
+											dragging
 												? (e) => {
 														handleDragEnter(e, { grp1, item1 }, grp.pair);
 												  }
 												: null
 										}
 										key={item}
-										className={dragging ? getStyles(grp1, item1) : "dnd-item"}
+										style={{ backgroundImage: `url(${grp.image})`, backgroundRepeat: "no-repeat" }}
+										className="dnd-item"
 									>
 										{item}
+										{/* {grp.image !== undefined && (
+											<img className="card-img" src={grp.image} alt={item} />
+										)} */}
 									</div>
 								);
 							})}
