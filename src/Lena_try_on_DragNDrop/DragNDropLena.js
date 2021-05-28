@@ -30,7 +30,8 @@ const DragNDropLena = () => {
 	const removeExtraDivs = () => {
 		document.querySelectorAll(".dnd-group").forEach((e) => {
 			if (e.innerHTML === "") {
-				e.remove();
+				// e.remove();
+				e.style.backgroundColor = "transparent";
 			}
 		});
 	};
@@ -73,17 +74,6 @@ const DragNDropLena = () => {
 		}
 	};
 
-	const getStyles = (params) => {
-		// const currentItem = dragItem.current;
-		// if (currentItem.grp1 === params.grp1 && currentItem.item1 === params.item1) {
-		// 	return "current";
-		// }
-		// return "dnd-item";
-		if (params.image !== undefined) {
-			// <img className="card-img" src={params.image} alt={params.item} />;
-		}
-	};
-
 	return (
 		<div>
 			<div className="drag-n-drop">
@@ -103,7 +93,7 @@ const DragNDropLena = () => {
 							{grp.items.map((item, item1) => {
 								return (
 									<div
-										draggable
+										draggable={grp.image ? false : true}
 										value={grp.pair}
 										onDragStart={(e) => {
 											handleDragStart(e, { grp1, item1 });
@@ -116,7 +106,11 @@ const DragNDropLena = () => {
 												: null
 										}
 										key={item}
-										style={{ backgroundImage: `url(${grp.image})`, backgroundRepeat: "no-repeat" }}
+										style={{
+											backgroundImage: `url(${grp.image})`,
+
+											backgroundRepeat: "no-repeat",
+										}}
 										className="dnd-item"
 									>
 										{item}
