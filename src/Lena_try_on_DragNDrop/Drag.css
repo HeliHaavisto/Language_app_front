@@ -14,7 +14,6 @@ body {
 }
 
 .draggable-elements {
-	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	padding: 1rem;
@@ -30,6 +29,7 @@ body {
 .draggable {
 	height: 170px;
 	width: 170px;
+	object-fit: cover;
 	margin-bottom: 40px;
 	display: flex;
 	align-items: center;

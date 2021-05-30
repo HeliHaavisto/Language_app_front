@@ -4,19 +4,121 @@
 			"id": 1,
 			"name_en": "cat",
 			"name_fi": "kissa",
-			"img": "./img/cat-solid.svg"
+			"img": "./img/cat.jpg"
 		},
 		{
 			"id": 2,
 			"name_en": "dog",
 			"name_fi": "koira",
-			"img": "./img/dog-solid.svg"
+			"img": "./img/dog.jpg"
 		},
 		{
 			"id": 3,
 			"name_en": "horse",
 			"name_fi": "hevonen",
-			"img": "./img/horse-solid.svg"
+			"img": "./img/horse.jpg"
+		},
+		{
+			"id": 4,
+			"name_en": "tea",
+			"name_fi": "tee",
+			"img": "./img/tea.jpg"
+		},
+		{
+			"id": 5,
+			"name_en": "banana",
+			"name_fi": "banaani",
+			"img": "./img/banana.jpg"
+		},
+		{
+			"id": 6,
+			"name_en": "strawberry",
+			"name_fi": "mansikka",
+			"img": "./img/strawberry.jpg"
+		},
+		{
+			"id": 7,
+			"name_en": "apple",
+			"name_fi": "omena",
+			"img": "./img/apple.jpg"
+		},
+		{
+			"id": 8,
+			"name_en": "meatballs",
+			"name_fi": "lihapullat",
+			"img": "./img/meatballs.jpg"
+		},
+		{
+			"id": 9,
+			"name_en": "duck",
+			"name_fi": "sorsa",
+			"img": "./img/duck.jpg"
+		},
+		{
+			"id": 10,
+			"name_en": "rabbit",
+			"name_fi": "kani",
+			"img": "./img/rabbit.jpg"
+		},
+		{
+			"id": 11,
+			"name_en": "guinea_pig",
+			"name_fi": "marsu",
+			"img": "./img/guinea_pig.jpg"
+		},
+		{
+			"id": 12,
+			"name_en": "orange",
+			"name_fi": "appelsiini",
+			"img": "./img/orange.jpg"
+		},
+		{
+			"id": 13,
+			"name_en": "lemon",
+			"name_fi": "sitruuna",
+			"img": "./img/lemon.jpg"
+		},
+		{
+			"id": 14,
+			"name_en": "fish",
+			"name_fi": "kala",
+			"img": "./img/fish.jpg"
+		},
+		{
+			"id": 15,
+			"name_en": "cow",
+			"name_fi": "lehmä",
+			"img": "./img/cow.jpg"
+		},
+		{
+			"id": 16,
+			"name_en": "ice_cream",
+			"name_fi": "jäätelö",
+			"img": "./img/ice_cream.jpg"
+		},
+		{
+			"id": 17,
+			"name_en": "beer",
+			"name_fi": "olut",
+			"img": "./img/beer.jpg"
+		},
+		{
+			"id": 18,
+			"name_en": "sheep",
+			"name_fi": "lammas",
+			"img": "./img/sheep.jpg"
+		},
+		{
+			"id": 19,
+			"name_en": "bear",
+			"name_fi": "karhu",
+			"img": "./img/bear.jpg"
+		},
+		{
+			"id": 20,
+			"name_en": "pea",
+			"name_fi": "herne",
+			"img": "./img/pea.jpg"
 		}
 	]
 }

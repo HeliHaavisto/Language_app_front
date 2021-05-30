@@ -80,7 +80,7 @@ const DragNDrop = () => {
 			// event.target.style.backgroundColor = window.getComputedStyle(draggableElement).color;
 			draggableElement.classList.add("dragged");
 			draggableElement.setAttribute("draggable", "false");
-			event.target.innerHTML = `<img src="./img/${draggableElementData}-solid.svg"/><span>${droppableFinnishName}</span>`;
+			event.target.innerHTML = `<img src="./img/${draggableElementData}.jpg"/><span>${droppableFinnishName}</span>`;
 		}
 	}
 
