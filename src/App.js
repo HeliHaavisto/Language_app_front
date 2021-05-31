@@ -11,6 +11,8 @@ import Gamelanding from "./Gamelanding";
 import Menu from "./Menu";
 import Modal from "./Modal";
 
+import DragNDrop from "./DragNDrop/DragNDrop";
+
 function App() {
   return (
     <Router>
@@ -25,7 +27,7 @@ function App() {
           <Alphabet />
         </Route>
         <Route path="/dragndrop">
-          <Dragndrop />
+          <DragNDrop />
         </Route>
         <Route path="/gamelanding">
           <Gamelanding />

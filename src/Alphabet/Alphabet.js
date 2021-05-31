@@ -40,119 +40,119 @@ class Alphabet extends Component {
 
   clickHandler = (abc_name) => {
     switch (abc_name) {
-      case "a":
+      case "Aa":
         let a_sound = new Audio(soundA);
         a_sound.play();
         break;
-      case "b":
+      case "Bb":
         let b_sound = new Audio(soundB);
         b_sound.play();
         break;
-      case "c":
+      case "Cc":
         let c_sound = new Audio(soundC);
         c_sound.play();
         break;
-      case "d":
+      case "Dd":
         let d_sound = new Audio(soundD);
         d_sound.play();
         break;
-      case "e":
+      case "Ee":
         let e_sound = new Audio(soundE);
         e_sound.play();
         break;
-      case "f":
+      case "Ff":
         let f_sound = new Audio(soundF);
         f_sound.play();
         break;
-      case "g":
+      case "Gg":
         let g_sound = new Audio(soundG);
         g_sound.play();
         break;
-      case "h":
+      case "Hh":
         let h_sound = new Audio(soundH);
         h_sound.play();
         break;
-      case "i":
+      case "Ii":
         let i_sound = new Audio(soundI);
         i_sound.play();
         break;
-      case "j":
+      case "Jj":
         let j_sound = new Audio(soundJ);
         j_sound.play();
         break;
-      case "k":
+      case "Kk":
         let k_sound = new Audio(soundK);
         k_sound.play();
         break;
-      case "l":
+      case "Ll":
         let l_sound = new Audio(soundL);
         l_sound.play();
         break;
-      case "m":
+      case "Mm":
         let m_sound = new Audio(soundM);
         m_sound.play();
         break;
-      case "n":
+      case "Nn":
         let n_sound = new Audio(soundN);
         n_sound.play();
         break;
-      case "o":
+      case "Oo":
         let o_sound = new Audio(soundO);
         o_sound.play();
         break;
-      case "p":
+      case "Pp":
         let p_sound = new Audio(soundP);
         p_sound.play();
         break;
-      case "q":
+      case "Qq":
         let q_sound = new Audio(soundQ);
         q_sound.play();
         break;
-      case "r":
+      case "Rr":
         let r_sound = new Audio(soundR);
         r_sound.play();
         break;
-      case "s":
+      case "Ss":
         let s_sound = new Audio(soundS);
         s_sound.play();
         break;
-      case "t":
+      case "Tt":
         let t_sound = new Audio(soundT);
         t_sound.play();
         break;
-      case "u":
+      case "Uu":
         let u_sound = new Audio(soundU);
         u_sound.play();
         break;
-      case "v":
+      case "Vv":
         let v_sound = new Audio(soundV);
         v_sound.play();
         break;
-      case "w":
+      case "Ww":
         let w_sound = new Audio(soundW);
         w_sound.play();
         break;
-      case "x":
+      case "Xx":
         let x_sound = new Audio(soundX);
         x_sound.play();
         break;
-      case "y":
+      case "Yy":
         let y_sound = new Audio(soundY);
         y_sound.play();
         break;
-      case "z":
+      case "Zz":
         let z_sound = new Audio(soundZ);
         z_sound.play();
         break;
-      case "å":
+      case "Åå":
         let swed_a_sound = new Audio(soundSwedA);
         swed_a_sound.play();
         break;
-      case "ä":
+      case "Ää":
         let dots_a_sound = new Audio(soundDotsA);
         dots_a_sound.play();
         break;
-      case "ö":
+      case "Öö":
         let dots_o_sound = new Audio(soundDotsO);
         dots_o_sound.play();
         break;

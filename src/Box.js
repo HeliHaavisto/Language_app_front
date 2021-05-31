@@ -25,9 +25,9 @@ const Box = () => {
   const onDropHandler = (e, dropId) => {
     e.preventDefault();
     let dragId = e.dataTransfer.getData("id");
-
     //console.log(dragId);
     //console.log(dropId);
+    console.log("finished", e);
 
     if (dragId == dropId) {
       e.target.style.backgroundColor = "green";
@@ -55,7 +55,7 @@ const Box = () => {
               className="drag "
               src={item.img}
               alt={item.name_fi}
-              draggable={true}
+              draggable
               onDragStart={(e) => onDragStartHandler(e, item.id)}
             />
             <strong
