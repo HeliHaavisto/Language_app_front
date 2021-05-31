@@ -12,8 +12,7 @@ import Menu from "./Menu";
 import Modal from "./Modal";
 import Iolantasdnd from "./Iolantasdnd";
 
-import DragNDrop from "./Lena_try_on_DragNDrop/DragNDropLena";
-import NewDragAndDropLena from "./Lena_try_on_DragNDrop/NewDragAndDropLena";
+import DragNDrop from "./DragNDrop/DragNDrop";
 
 function App() {
 	return (
@@ -29,7 +28,7 @@ function App() {
 					<Alphabet />
 				</Route>
 				<Route path="/dragndrop">
-					<Dragndrop />
+					<DragNDrop />
 				</Route>
 				<Route path="/gamelanding">
 					<Gamelanding />
@@ -39,12 +38,6 @@ function App() {
 				</Route>
 				<Route path="/modal">
 					<Modal />
-				</Route>
-				<Route path="/lena">
-					<DragNDrop />
-				</Route>
-				<Route path="/lenanew">
-					<NewDragAndDropLena />
 				</Route>
 				<Route path="/iolanta">
 					<Iolantasdnd />

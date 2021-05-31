@@ -26,20 +26,6 @@ const DragNDrop = () => {
 		});
 	}, []);
 
-	const draggableElements = document.querySelectorAll(".draggable");
-	const droppableElements = document.querySelectorAll(".droppable");
-
-	// draggableElements.forEach((elem) => {
-	// 	elem.addEventListener("dragstart", dragStart); // Fires as soon as the user starts dragging an item - This is where we can define the drag data
-	// });
-
-	// droppableElements.forEach((elem) => {
-	// 	elem.addEventListener("dragenter", dragEnter); // Fires when a dragged item enters a valid drop target
-	// 	elem.addEventListener("dragover", dragOver); // Fires when a dragged item is being dragged over a valid drop target, repeatedly while the draggable item is within the drop zone
-	// 	elem.addEventListener("dragleave", dragLeave); // Fires when a dragged item leaves a valid drop target
-	// 	elem.addEventListener("drop", drop); // Fires when an item is dropped on a valid drop target
-	// });
-
 	function dragStart(event) {
 		event.dataTransfer.setData("text", event.target.id); // or "text/plain" but just "text" would also be fine since we are not setting any other type/format for data value
 		console.log("START DRAGGING!");
@@ -76,8 +62,6 @@ const DragNDrop = () => {
 		if (isCorrectMatching) {
 			const draggableElement = document.getElementById(draggableElementData);
 			event.target.classList.add("dropped");
-			// event.target.style.backgroundColor = draggableElement.style.color; // This approach works only for inline styles. A more general approach would be the following:
-			// event.target.style.backgroundColor = window.getComputedStyle(draggableElement).color;
 			draggableElement.classList.add("dragged");
 			draggableElement.setAttribute("draggable", "false");
 			event.target.innerHTML = `<img src="./img/${draggableElementData}.jpg"/><span>${droppableFinnishName}</span>`;
@@ -106,9 +90,6 @@ const DragNDrop = () => {
 									dragStart(e);
 								}}
 							/>
-							// <div key={item.id} className="draggable" draggable="true" id={item.name_en}>
-							// 	{item.name_en}
-							// </div>
 						);
 					})
 				)}
