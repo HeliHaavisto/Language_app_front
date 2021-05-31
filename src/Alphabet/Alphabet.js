@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { abc } from "./abc";
 import Letter from "./Letter";
 
+import "./alphabet.css";
+import "../App.css";
+
 import soundA from "./sounds/a.mp3";
 import soundB from "./sounds/b.mp3";
 import soundC from "./sounds/c.mp3";
@@ -166,6 +169,9 @@ class Alphabet extends Component {
   render() {
     return (
       <>
+        <div className="p-alphabet">
+          <p>Press each letter to learn pronunciation</p>
+        </div>
         <div className="abc-container">
           {this.state.abc.map((letter) => {
             return (
