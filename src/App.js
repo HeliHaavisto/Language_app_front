@@ -10,7 +10,6 @@ import Dragndrop from "./Dragndrop";
 import Gamelanding from "./Gamelanding";
 import Menu from "./Menu";
 import Modal from "./Modal";
-import Iolantasdnd from "./Iolantasdnd";
 
 function App() {
   return (
@@ -36,9 +35,6 @@ function App() {
         </Route>
         <Route path="/modal">
           <Modal />
-        </Route>
-        <Route path="/iolanta">
-          <Iolantasdnd />
         </Route>
       </Switch>
     </Router>
