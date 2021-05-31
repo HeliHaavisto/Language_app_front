@@ -1,6 +1,6 @@
 import React from "react";
-import Box from "./Box";
 import { Link } from "react-router-dom";
+import DragNDrop from "./DragNDrop/DragNDrop";
 
 const Dragndrop = () => {
   return (
@@ -15,7 +15,7 @@ const Dragndrop = () => {
       >
         LET'S GO!
       </h1>
-      <Box />
+      <DragNDrop />
       <Link to="/">Home</Link>
     </div>
   );
