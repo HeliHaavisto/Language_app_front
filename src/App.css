@@ -59,8 +59,7 @@ p {
   border-radius: 5px;
 }
 
-.drag,
-.drop {
+.draggable {
   display: inline-block;
   width: 100px;
   height: 100px;
@@ -71,7 +70,15 @@ p {
   color: white;
 }
 
-.drop {
+.droppable {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 5px auto;
+  line-height: 5em;
+  text-align: center;
+  background-color: #110a65;
+  color: white;
   position: absolute;
   right: 0;
   top: 10;

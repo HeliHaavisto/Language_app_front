@@ -24,11 +24,13 @@ const Box = () => {
 
   const onDropHandler = (e, dropId) => {
     e.preventDefault();
+
     let dragId = e.dataTransfer.getData("id");
+
     //console.log(dragId);
     //console.log(dropId);
 
-    if (dragId == dropId) {
+    if (dragId === dropId) {
       e.target.style.backgroundColor = "green";
     } else {
       e.target.style.backgroundColor = "red";
@@ -51,7 +53,7 @@ const Box = () => {
         return (
           <div key={item.id}>
             <img
-              className="drag "
+              className="draggable "
               src={item.img}
               alt={item.name_fi}
               draggable
@@ -60,7 +62,7 @@ const Box = () => {
             <strong
               onDragOver={(e) => onDragOverHandler(e)}
               onDrop={(e) => onDropHandler(e, item.id)}
-              className=" drop"
+              className=" droppable"
             >
               {item.name_fi}
             </strong>
