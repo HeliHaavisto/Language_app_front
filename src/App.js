@@ -16,14 +16,26 @@ function App() {
     <Router>
       <Switch>
         <Route path="/" exact>
-          {Home}
+          <Home />
         </Route>
-        <Route path="/about">{About}</Route>
-        <Route path="/alphabet">{Alphabet}</Route>
-        <Route path="/dragndrop">{Dragndrop}</Route>
-        <Route path="/gamelanding">{Gamelanding}</Route>
-        <Route path="/menu">{Menu}</Route>
-        <Route path="/modal">{Modal}</Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/alphabet">
+          <Alphabet />
+        </Route>
+        <Route path="/dragndrop">
+          <Dragndrop />
+        </Route>
+        <Route path="/gamelanding">
+          <Gamelanding />
+        </Route>
+        <Route path="/menu">
+          <Menu />
+        </Route>
+        <Route path="/modal">
+          <Modal />
+        </Route>
       </Switch>
     </Router>
   );
