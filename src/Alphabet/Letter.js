@@ -3,7 +3,8 @@ import React from "react";
 const Letter = (props) => {
   return (
     <button className="abc-letter" onClick={props.play_sound}>
-      {props.name}
+      <div className="front-side">{props.name}</div>
+      <div className="back-side">{props.pronunciation}</div>
     </button>
   );
 };

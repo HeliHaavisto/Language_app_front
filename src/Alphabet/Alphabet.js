@@ -178,6 +178,7 @@ class Alphabet extends Component {
               <Letter
                 key={letter.name}
                 name={letter.name}
+                pronunciation={letter.pronunciation}
                 play_sound={this.clickHandler.bind(this, letter.name)}
               />
             );

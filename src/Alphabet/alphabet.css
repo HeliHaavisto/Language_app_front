@@ -18,6 +18,27 @@
   color: white;
   border-style: none;
   border-radius: 5px;
+  transition: transform 1s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.abc-letter:hover {
+  transform: rotateY(180deg);
+}
+
+.abc-letter div {
+  backface-visibility: hidden;
+}
+
+.front-side {
+  position: absolute;
+  transform-style: preserve-3d;
+}
+
+.back-side {
+  position: absolute;
+  transform: rotateY(180deg);
+  transform-style: preserve-3d;
 }
 
 .p-alphabet {
