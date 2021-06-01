@@ -1,99 +1,111 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 body {
-  font-family: "Montserrat", sans-serif;
-  background-color: #eee;
-  color: #111;
+	font-family: "Montserrat", sans-serif;
+	background-color: #eee;
+	color: #111;
 }
 
 .container-for-elements {
-  display: flex;
+	display: flex;
 }
 
 .draggable-elements {
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem;
 }
 
 .droppable-elements {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 1rem;
 }
 
 .draggable {
-  height: 8rem;
-  width: 8rem;
-  object-fit: cover;
-  margin-bottom: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4rem;
-  cursor: grab;
-  transition: opacity 0.2s;
+	height: 8rem;
+	width: 8rem;
+	object-fit: cover;
+	margin-bottom: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 4rem;
+	cursor: grab;
+	transition: opacity 0.2s;
 }
 .draggable:hover {
-  opacity: 0.5;
+	opacity: 0.5;
 }
 
 .droppable {
-  height: 8rem;
-  width: 8rem;
-  margin-bottom: 40px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  background-color: rgb(255, 255, 255, 0.5);
-  transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+
+	height: 8rem;
+	width: 8rem;
+	margin-bottom: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	font-size: 1.5rem;
+	font-weight: bold;
+	background-color: rgb(255, 255, 255, 0.65);
+	transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
+
 }
 .droppable span {
-  font-size: 1.25rem;
-  pointer-events: none; /* The element is never the target of pointer events */
+	font-size: 1.25rem;
+	pointer-events: none; /* The element is never the target of pointer events */
 }
 
 /* Drag and Drop Related Styling */
 
 .droppable.droppable-hover {
-  /* background-color: #bee3f0; */
-  border-width: 5px;
-  transform: scale(1.1);
+	/* background-color: #bee3f0; */
+	border-width: 5px;
+	transform: scale(1.1);
 }
 .droppable.dropped {
-  border-style: solid;
-  background-color: greenyellow;
+	border-style: solid;
+	background-color: greenyellow;
 }
 .droppable.dropped span {
-  font-size: 0.75rem;
-  margin-top: 0.5rem;
+	font-size: 0.75rem;
+	margin-top: 0.5rem;
 }
 .droppable.dropped img {
-  pointer-events: none;
+	pointer-events: none;
 }
 .draggable.dragged {
-  user-select: none;
-  opacity: 0.1;
-  cursor: default;
+	user-select: none;
+	opacity: 0.1;
+	cursor: default;
 }
 .draggable.dragged:hover {
-  opacity: 0.1;
+	opacity: 0.1;
 }
 
 .droppable img {
-  height: 110px;
+	height: 80px;
 }
 
-.start-over {
-  align-self: flex-end;
-  height: 30px;
-  width: 100%;
+.spinner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 3rem;
+	height: 3rem;
+}
+
+.buttonsOnBottom {
+	display: flex;
+}
+
+.dragNdropButtons {
+	margin: 0.5rem;
 }
