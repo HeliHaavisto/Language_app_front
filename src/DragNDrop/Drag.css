@@ -43,7 +43,6 @@ body {
 }
 
 .droppable {
-
 	height: 8rem;
 	width: 8rem;
 	margin-bottom: 40px;
@@ -56,7 +55,6 @@ body {
 	font-weight: bold;
 	background-color: rgb(255, 255, 255, 0.65);
 	transition: border-width 0.2s, transform 0.2s, background-color 0.4s;
-
 }
 .droppable span {
 	font-size: 1.25rem;
@@ -95,11 +93,12 @@ body {
 }
 
 .spinner {
-	position: absolute;
-	top: 50%;
-	left: 50%;
+	/* position: absolute;
+	top: 30%;
+	left: 50%; */
 	width: 3rem;
 	height: 3rem;
+	margin-bottom: 2rem;
 }
 
 .buttonsOnBottom {
