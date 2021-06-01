@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import Spinner from "react-bootstrap/Spinner";
 
 import "./Drag.css";
 
@@ -14,10 +15,12 @@ const DragNDrop = () => {
 	const dataSet4 = data.slice(15, 20);
 
 	const [counter, setCounter] = useState(1);
+	const [loading, setLoading] = useState(false);
 
 	useEffect(() => {
 		axios.get("http://warm-beach-10313.herokuapp.com/items/all").then((response) => {
 			setData(response.data);
+			setLoading(true);
 		});
 	}, []);
 
@@ -75,6 +78,7 @@ const DragNDrop = () => {
 
 	return (
 		<div className="container-for-elements">
+			{loading === false && <Spinner className="spinner" animation="border" variant="warning" />}
 			{counter === 1 && (
 				<>
 					<h1>Level 1</h1>
