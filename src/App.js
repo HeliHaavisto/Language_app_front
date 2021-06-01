@@ -8,7 +8,7 @@ import About from "./About";
 import Alphabet from "./Alphabet/Alphabet";
 import Gamelanding from "./Gamelanding";
 import Menu from "./Menu";
-import Modal from "./Modal";
+import Modal from "./DragNDrop/ModalWindow";
 import DragNDrop from "./DragNDrop/DragNDrop";
 
 function App() {
