@@ -1,14 +1,19 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
+
+import ModalWindow from "./ModalWindow";
+
 import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
+
 
 import "./Drag.css";
 
 import randomArrayShuffle from "./shuffle";
 
 const DragNDrop = () => {
+
 	const [data, setData] = useState([]);
 	const dataSet1 = data.slice(0, 5);
 	const dataSet2 = data.slice(5, 10);
@@ -17,6 +22,8 @@ const DragNDrop = () => {
 
 	const [counter, setCounter] = useState(1);
 	const [loading, setLoading] = useState(false);
+  
+  const [modalShow, setModalShow] = React.useState(false);
 
 	useEffect(() => {
 		axios.get("http://warm-beach-10313.herokuapp.com/items/all").then((response) => {
@@ -36,6 +43,7 @@ const DragNDrop = () => {
 		}
 		console.log("ENTERED DRAGGING");
 	}
+
 
 	function dragOver(event) {
 		if (!event.target.classList.contains("dropped")) {
@@ -75,7 +83,7 @@ const DragNDrop = () => {
 		setCounter(counter + 1);
 	}
 
-	console.log("counter is ", counter);
+
 
 	return (
 		<div className="container">
@@ -288,6 +296,7 @@ const DragNDrop = () => {
 				)}
 			</div>
 			<div className="buttonsOnBottom">
+           <ModalWindow show={modalShow} onHide={() => setModalShow(false)} />
 				<Link to="/">
 					<Button variant="warning" className="dragNdropButtons">
 						Home
@@ -304,6 +313,7 @@ const DragNDrop = () => {
 			</div>
 		</div>
 	);
+
 };
 
 export default DragNDrop;
