@@ -92,16 +92,18 @@ body {
 	height: 80px;
 }
 
-.start-over {
-	align-self: flex-end;
-	height: 30px;
-	width: 100%;
-}
-
 .spinner {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	width: 3rem;
 	height: 3rem;
+}
+
+.buttonsOnBottom {
+	display: flex;
+}
+
+.dragNdropButtons {
+	margin: 0.5rem;
 }

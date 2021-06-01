@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Spinner from "react-bootstrap/Spinner";
+import Button from "react-bootstrap/Button";
 
 import "./Drag.css";
 
@@ -77,225 +78,230 @@ const DragNDrop = () => {
 	console.log("counter is ", counter);
 
 	return (
-		<div className="container-for-elements">
-			{loading === false && <Spinner className="spinner" animation="border" variant="warning" />}
-			{counter === 1 && (
-				<>
-					<h1>Level 1</h1>
-					<section className="draggable-elements">
-						{randomArrayShuffle(
-							dataSet1.map((item) => {
-								return (
-									<img
-										alt={item.name_en}
-										src={item.img}
-										className="draggable"
-										key={item.name_en}
-										draggable
-										id={item.name_en}
-										onDragStart={(e) => {
-											dragStart(e);
-										}}
-									/>
-								);
-							})
-						)}
-					</section>
-					<section className="droppable-elements">
-						{randomArrayShuffle(
-							dataSet1.map((item) => {
-								return (
-									<div
-										finnish_name={item.name_fi}
-										key={item.name_en}
-										className="droppable"
-										data-draggable-id={item.name_en}
-										onDragEnter={(e) => {
-											dragEnter(e);
-										}}
-										onDragOver={(e) => {
-											dragOver(e);
-										}}
-										onDragLeave={(e) => {
-											dragLeave(e);
-										}}
-										onDrop={(e) => {
-											drop(e);
-										}}
-									>
-										<span>{item.name_fi}</span>
-									</div>
-								);
-							})
-						)}
-					</section>
-				</>
-			)}
-			{counter === 2 && (
-				<>
-					<h1>Level 2</h1>
-					<section className="draggable-elements">
-						{randomArrayShuffle(
-							dataSet2.map((item) => {
-								return (
-									<img
-										alt={item.name_en}
-										src={item.img}
-										className="draggable"
-										key={item.name_en}
-										draggable
-										id={item.name_en}
-										onDragStart={(e) => {
-											dragStart(e);
-										}}
-									/>
-								);
-							})
-						)}
-					</section>
-					<section className="droppable-elements">
-						{randomArrayShuffle(
-							dataSet2.map((item) => {
-								return (
-									<div
-										finnish_name={item.name_fi}
-										key={item.name_en}
-										className="droppable"
-										data-draggable-id={item.name_en}
-										onDragEnter={(e) => {
-											dragEnter(e);
-										}}
-										onDragOver={(e) => {
-											dragOver(e);
-										}}
-										onDragLeave={(e) => {
-											dragLeave(e);
-										}}
-										onDrop={(e) => {
-											drop(e);
-										}}
-									>
-										<span>{item.name_fi}</span>
-									</div>
-								);
-							})
-						)}
-					</section>
-				</>
-			)}
-			{counter === 3 && (
-				<>
-					<h1>Level 3</h1>
-					<section className="draggable-elements">
-						{randomArrayShuffle(
-							dataSet3.map((item) => {
-								return (
-									<img
-										alt={item.name_en}
-										src={item.img}
-										className="draggable"
-										key={item.name_en}
-										draggable
-										id={item.name_en}
-										onDragStart={(e) => {
-											dragStart(e);
-										}}
-									/>
-								);
-							})
-						)}
-					</section>
-					<section className="droppable-elements">
-						{randomArrayShuffle(
-							dataSet3.map((item) => {
-								return (
-									<div
-										finnish_name={item.name_fi}
-										key={item.name_en}
-										className="droppable"
-										data-draggable-id={item.name_en}
-										onDragEnter={(e) => {
-											dragEnter(e);
-										}}
-										onDragOver={(e) => {
-											dragOver(e);
-										}}
-										onDragLeave={(e) => {
-											dragLeave(e);
-										}}
-										onDrop={(e) => {
-											drop(e);
-										}}
-									>
-										<span>{item.name_fi}</span>
-									</div>
-								);
-							})
-						)}
-					</section>
-				</>
-			)}
-			{counter === 4 && (
-				<>
-					<h1>Level 4</h1>
-					<section className="draggable-elements">
-						{randomArrayShuffle(
-							dataSet4.map((item) => {
-								return (
-									<img
-										alt={item.name_en}
-										src={item.img}
-										className="draggable"
-										key={item.name_en}
-										draggable
-										id={item.name_en}
-										onDragStart={(e) => {
-											dragStart(e);
-										}}
-									/>
-								);
-							})
-						)}
-					</section>
-					<section className="droppable-elements">
-						{randomArrayShuffle(
-							dataSet4.map((item) => {
-								return (
-									<div
-										finnish_name={item.name_fi}
-										key={item.name_en}
-										className="droppable"
-										data-draggable-id={item.name_en}
-										onDragEnter={(e) => {
-											dragEnter(e);
-										}}
-										onDragOver={(e) => {
-											dragOver(e);
-										}}
-										onDragLeave={(e) => {
-											dragLeave(e);
-										}}
-										onDrop={(e) => {
-											drop(e);
-										}}
-									>
-										<span>{item.name_fi}</span>
-									</div>
-								);
-							})
-						)}
-					</section>
-				</>
-			)}
-			<button className="start-over" onClick={startOver}>
-				Start Over
-			</button>
-			{counter < 4 && (
-				<button className="start-over" onClick={nextLevel}>
-					Next Level
-				</button>
-			)}
-			<Link to="/">Home</Link>
+		<div className="container">
+			<h1 className="style-font">Level {counter}</h1>
+			<div className="container-for-elements">
+				{loading === false && <Spinner className="spinner" animation="border" variant="warning" />}
+				{counter === 1 && (
+					<>
+						<section className="draggable-elements">
+							{randomArrayShuffle(
+								dataSet1.map((item) => {
+									return (
+										<img
+											alt={item.name_en}
+											src={item.img}
+											className="draggable"
+											key={item.name_en}
+											draggable
+											id={item.name_en}
+											onDragStart={(e) => {
+												dragStart(e);
+											}}
+										/>
+									);
+								})
+							)}
+						</section>
+						<section className="droppable-elements">
+							{randomArrayShuffle(
+								dataSet1.map((item) => {
+									return (
+										<div
+											finnish_name={item.name_fi}
+											key={item.name_en}
+											className="droppable"
+											data-draggable-id={item.name_en}
+											onDragEnter={(e) => {
+												dragEnter(e);
+											}}
+											onDragOver={(e) => {
+												dragOver(e);
+											}}
+											onDragLeave={(e) => {
+												dragLeave(e);
+											}}
+											onDrop={(e) => {
+												drop(e);
+											}}
+										>
+											<span>{item.name_fi}</span>
+										</div>
+									);
+								})
+							)}
+						</section>
+					</>
+				)}
+				{counter === 2 && (
+					<>
+						<section className="draggable-elements">
+							{randomArrayShuffle(
+								dataSet2.map((item) => {
+									return (
+										<img
+											alt={item.name_en}
+											src={item.img}
+											className="draggable"
+											key={item.name_en}
+											draggable
+											id={item.name_en}
+											onDragStart={(e) => {
+												dragStart(e);
+											}}
+										/>
+									);
+								})
+							)}
+						</section>
+						<section className="droppable-elements">
+							{randomArrayShuffle(
+								dataSet2.map((item) => {
+									return (
+										<div
+											finnish_name={item.name_fi}
+											key={item.name_en}
+											className="droppable"
+											data-draggable-id={item.name_en}
+											onDragEnter={(e) => {
+												dragEnter(e);
+											}}
+											onDragOver={(e) => {
+												dragOver(e);
+											}}
+											onDragLeave={(e) => {
+												dragLeave(e);
+											}}
+											onDrop={(e) => {
+												drop(e);
+											}}
+										>
+											<span>{item.name_fi}</span>
+										</div>
+									);
+								})
+							)}
+						</section>
+					</>
+				)}
+				{counter === 3 && (
+					<>
+						<section className="draggable-elements">
+							{randomArrayShuffle(
+								dataSet3.map((item) => {
+									return (
+										<img
+											alt={item.name_en}
+											src={item.img}
+											className="draggable"
+											key={item.name_en}
+											draggable
+											id={item.name_en}
+											onDragStart={(e) => {
+												dragStart(e);
+											}}
+										/>
+									);
+								})
+							)}
+						</section>
+						<section className="droppable-elements">
+							{randomArrayShuffle(
+								dataSet3.map((item) => {
+									return (
+										<div
+											finnish_name={item.name_fi}
+											key={item.name_en}
+											className="droppable"
+											data-draggable-id={item.name_en}
+											onDragEnter={(e) => {
+												dragEnter(e);
+											}}
+											onDragOver={(e) => {
+												dragOver(e);
+											}}
+											onDragLeave={(e) => {
+												dragLeave(e);
+											}}
+											onDrop={(e) => {
+												drop(e);
+											}}
+										>
+											<span>{item.name_fi}</span>
+										</div>
+									);
+								})
+							)}
+						</section>
+					</>
+				)}
+				{counter === 4 && (
+					<>
+						<section className="draggable-elements">
+							{randomArrayShuffle(
+								dataSet4.map((item) => {
+									return (
+										<img
+											alt={item.name_en}
+											src={item.img}
+											className="draggable"
+											key={item.name_en}
+											draggable
+											id={item.name_en}
+											onDragStart={(e) => {
+												dragStart(e);
+											}}
+										/>
+									);
+								})
+							)}
+						</section>
+						<section className="droppable-elements">
+							{randomArrayShuffle(
+								dataSet4.map((item) => {
+									return (
+										<div
+											finnish_name={item.name_fi}
+											key={item.name_en}
+											className="droppable"
+											data-draggable-id={item.name_en}
+											onDragEnter={(e) => {
+												dragEnter(e);
+											}}
+											onDragOver={(e) => {
+												dragOver(e);
+											}}
+											onDragLeave={(e) => {
+												dragLeave(e);
+											}}
+											onDrop={(e) => {
+												drop(e);
+											}}
+										>
+											<span>{item.name_fi}</span>
+										</div>
+									);
+								})
+							)}
+						</section>
+					</>
+				)}
+			</div>
+			<div className="buttonsOnBottom">
+				<Link to="/">
+					<Button variant="warning" className="dragNdropButtons">
+						Home
+					</Button>
+				</Link>
+				<Button variant="warning" className="dragNdropButtons" onClick={startOver}>
+					Start Over
+				</Button>
+				{counter < 4 && (
+					<Button variant="warning" className="dragNdropButtons" onClick={nextLevel}>
+						Next Level
+					</Button>
+				)}
+			</div>
 		</div>
 	);
 };
