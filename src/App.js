@@ -15,7 +15,7 @@ function App() {
 	return (
 		<Router>
 			<Switch>
-				<Route path="/Language_app_front/" exact>
+				<Route path="/" exact>
 					<Home />
 				</Route>
 				<Route path="/about">
