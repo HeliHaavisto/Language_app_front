@@ -3,7 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Home from "./Home";
 
-import { HashRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import About from "./About";
 import Alphabet from "./Alphabet/Alphabet";
 import Gamelanding from "./Gamelanding";
