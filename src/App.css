@@ -41,6 +41,7 @@ ul,
 li {
 	color: white;
 	margin-left: 0.5rem;
+	text-align: left;
 }
 
 .container {
