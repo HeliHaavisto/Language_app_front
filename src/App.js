@@ -15,25 +15,25 @@ function App() {
 	return (
 		<Router>
 			<Switch>
-				<Route path="/" exact>
+				<Route path="/language_app/" exact>
 					<Home />
 				</Route>
-				<Route path="/about">
+				<Route path="/language_app/about">
 					<About />
 				</Route>
-				<Route path="/alphabet">
+				<Route path="/language_app/alphabet">
 					<Alphabet />
 				</Route>
-				<Route path="/dragndrop">
+				<Route path="/language_app/dragndrop">
 					<DragNDrop />
 				</Route>
-				<Route path="/gamelanding">
+				<Route path="/language_app/gamelanding">
 					<Gamelanding />
 				</Route>
-				<Route path="/menu">
+				<Route path="/language_app/menu">
 					<Menu />
 				</Route>
-				<Route path="/modal">
+				<Route path="/language_app/modal">
 					<Modal />
 				</Route>
 			</Switch>

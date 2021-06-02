@@ -1,7 +1,7 @@
 {
 	"name": "language-app",
+	"homepage": ".",
 	"version": "0.1.0",
-	"homepage": "https://helihaavisto.github.io/Language_app_front",
 	"private": true,
 	"dependencies": {
 		"@google-cloud/storage": "^5.8.5",
@@ -24,9 +24,7 @@
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
-		"server": "json-server -p3001 --watch items.json",
-		"predeploy": "npm run build",
-		"deploy": "gh-pages -d build"
+		"server": "json-server -p3001 --watch items.json"
 	},
 	"eslintConfig": {
 		"extends": [
