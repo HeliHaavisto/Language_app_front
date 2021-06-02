@@ -25,7 +25,7 @@ const DragNDrop = () => {
 	const [modalShow, setModalShow] = React.useState(false);
 
 	useEffect(() => {
-		axios.get("http://warm-beach-10313.herokuapp.com/items/all").then((response) => {
+		axios.get("https://warm-beach-10313.herokuapp.com/items/all").then((response) => {
 			setData(response.data);
 			setLoading(true);
 		});
@@ -306,24 +306,6 @@ const DragNDrop = () => {
 					nextlevel={() => nextLevel()}
 					onHide={() => setModalShow(false)}
 				/>
-				<Link to="/">
-					<Button variant="warning" className="dragNdropButtons">
-						Home
-					</Button>
-				</Link>
-
-				{/* {counter < 4 && (
-					<Button
-						variant="warning"
-						className="dragNdropButtons"
-						onClick={function () {
-							nextLevel();
-							setModalShow(true);
-						}}
-					>
-						Next Level
-					</Button>
-				)} */}
 			</div>
 		</div>
 	);

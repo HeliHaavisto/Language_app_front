@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { abc } from "./abc";
 import Letter from "./Letter";
 
@@ -169,9 +168,8 @@ class Alphabet extends Component {
 	render() {
 		return (
 			<div className="container">
-				<div className="p-alphabet">
-					<p>Press each letter to learn pronunciation</p>
-				</div>
+				<p className="p-alphabet">Press each letter to learn pronunciation</p>
+
 				<div className="abc-container">
 					{this.state.abc.map((letter) => {
 						return (
@@ -184,7 +182,6 @@ class Alphabet extends Component {
 						);
 					})}
 				</div>
-				<Link to="/">Home</Link>
 			</div>
 		);
 	}
