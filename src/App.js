@@ -12,33 +12,33 @@ import Modal from "./DragNDrop/ModalWindow";
 import DragNDrop from "./DragNDrop/DragNDrop";
 
 function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route path="/" exact>
-          <Home />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/alphabet">
-          <Alphabet />
-        </Route>
-        <Route path="/dragndrop">
-          <DragNDrop />
-        </Route>
-        <Route path="/gamelanding">
-          <Gamelanding />
-        </Route>
-        <Route path="/menu">
-          <Menu />
-        </Route>
-        <Route path="/modal">
-          <Modal />
-        </Route>
-      </Switch>
-    </Router>
-  );
+	return (
+		<Router>
+			<Switch>
+				<Route path="/Language_app_front/" exact>
+					<Home />
+				</Route>
+				<Route path="/about">
+					<About />
+				</Route>
+				<Route path="/alphabet">
+					<Alphabet />
+				</Route>
+				<Route path="/dragndrop">
+					<DragNDrop />
+				</Route>
+				<Route path="/gamelanding">
+					<Gamelanding />
+				</Route>
+				<Route path="/menu">
+					<Menu />
+				</Route>
+				<Route path="/modal">
+					<Modal />
+				</Route>
+			</Switch>
+		</Router>
+	);
 }
 
 export default App;
