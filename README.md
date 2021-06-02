@@ -15,4 +15,6 @@
 - npm install react-bootstrap bootstrap@4.6.0
 - npm install json-server --save-dev
 
-test
+### Deployed with GitHub pages
+
+npm install gh-pages --save-dev
