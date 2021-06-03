@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import axios from "axios";
 
 import ModalWindow from "./ModalWindow";
 
 import Spinner from "react-bootstrap/Spinner";
-import Button from "react-bootstrap/Button";
 
 import "./Drag.css";
 
@@ -70,9 +69,6 @@ const DragNDrop = () => {
 			if (correctCounter === 5) {
 				setModalShow(true);
 			}
-
-			// setCorrectCounter(correctCounter + 1);
-			console.log(correctCounter);
 		}
 	}
 

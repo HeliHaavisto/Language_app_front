@@ -8,7 +8,7 @@ const Header = () => {
 	return (
 		<header>
 			<Link to="/language_app/">
-				<img class="header-logo" src={Logo} alt="Logo" />
+				<img className="header-logo" src={Logo} alt="Logo" />
 			</Link>
 			<nav>
 				<ul>
