@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import axios from "axios";
 
 import ModalWindow from "./ModalWindow";
 
 import Spinner from "react-bootstrap/Spinner";
-import Button from "react-bootstrap/Button";
 
 import "./Drag.css";
 
@@ -25,7 +24,7 @@ const DragNDrop = () => {
 	const [modalShow, setModalShow] = React.useState(false);
 
 	useEffect(() => {
-		axios.get("http://warm-beach-10313.herokuapp.com/items/all").then((response) => {
+		axios.get("https://warm-beach-10313.herokuapp.com/items/all").then((response) => {
 			setData(response.data);
 			setLoading(true);
 		});
@@ -70,9 +69,6 @@ const DragNDrop = () => {
 			if (correctCounter === 5) {
 				setModalShow(true);
 			}
-
-			// setCorrectCounter(correctCounter + 1);
-			console.log(correctCounter);
 		}
 	}
 
@@ -306,24 +302,6 @@ const DragNDrop = () => {
 					nextlevel={() => nextLevel()}
 					onHide={() => setModalShow(false)}
 				/>
-				<Link to="/">
-					<Button variant="warning" className="dragNdropButtons">
-						Home
-					</Button>
-				</Link>
-
-				{/* {counter < 4 && (
-					<Button
-						variant="warning"
-						className="dragNdropButtons"
-						onClick={function () {
-							nextLevel();
-							setModalShow(true);
-						}}
-					>
-						Next Level
-					</Button>
-				)} */}
 			</div>
 		</div>
 	);

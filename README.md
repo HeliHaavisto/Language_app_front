@@ -1,5 +1,7 @@
 # Language app
 
+[Here is the link to the app](https://ivankina.fi/language_app/)
+
 ## Creators:
 
 - Aryal Sagar
@@ -14,7 +16,3 @@
 - npm install axios
 - npm install react-bootstrap bootstrap@4.6.0
 - npm install json-server --save-dev
-
-### Deployed with GitHub pages
-
-npm install gh-pages --save-dev

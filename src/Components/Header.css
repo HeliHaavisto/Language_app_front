@@ -1,0 +1,35 @@
+header {
+	/* position: fixed; */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 3;
+	width: 100%;
+	transition: all 1s;
+	padding: 1rem;
+	margin-bottom: 2rem;
+}
+
+nav li {
+	display: inline;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+nav a {
+	text-decoration: none;
+	font-family: "Lobster", cursive;
+	font-size: 1.5rem;
+	transition: all 0.5s;
+	color: white;
+}
+
+nav a:hover {
+	text-decoration: underline;
+	color: white;
+}
+
+.header-logo {
+	max-height: 4rem;
+	margin: 0.5rem;
+}
